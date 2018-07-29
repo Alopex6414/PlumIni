@@ -14,11 +14,8 @@
 #ifndef __PLUMINI_H_
 #define __PLUMINI_H_
 
-//Include Windows Header File
-#include <Windows.h>
-
-//Include C/C++ Run Header File
-#include <stdio.h>
+//Include Plum Common Header File
+#include "PlumCommon.h"
 
 //Macro Definition
 #ifdef	PLUMINI_EXPORTS
@@ -26,6 +23,8 @@
 #else
 #define PLUMINI_API	__declspec(dllimport)
 #endif
+
+#define PLUMINI_CALLMODE	__stdcall
 
 //Class Definition
 class PLUMINI_API CPlumIni
