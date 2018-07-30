@@ -6,8 +6,9 @@
 * @file		PlumIni.h
 * @brief	This Program is PlumIni DLL Project.
 * @author	Alopex/Helium
-* @version	v1.00a
-* @date		2018-1-17	v1.00a	alopex	Create Project.
+* @version	v1.02a
+* @date		2018-01-17	v1.00a	alopex	Create Project.
+* @date		2018-07-30	v1.02a	alopex	Add Call Mode.
 */
 #pragma once
 
@@ -36,10 +37,10 @@ public:
 	CPlumIni();
 	~CPlumIni();
 
-	static bool PlumIniReadStringKeyValue(char* pStrFileName, char* pStrSection, char* pStrKey, char* pStrDefault, char** ppStrValue);
-	static bool PlumIniReadIntKeyValue(char* pStrFileName, char* pStrSection, char* pStrKey, int nDefault, int* pValue);
-	static bool PlumIniWriteStringKeyValue(char* pStrFileName, char* pStrSection, char* pStrKey, char* pStrValue);
-	static bool PlumIniWriteIntKeyValue(char* pStrFileName, char* pStrSection, char* pStrKey, int nValue);
+	static bool PLUMINI_CALLMODE PlumIniReadStringKeyValue(char* pStrFileName, char* pStrSection, char* pStrKey, char* pStrDefault, char** ppStrValue);
+	static bool PLUMINI_CALLMODE PlumIniReadIntKeyValue(char* pStrFileName, char* pStrSection, char* pStrKey, int nDefault, int* pValue);
+	static bool PLUMINI_CALLMODE PlumIniWriteStringKeyValue(char* pStrFileName, char* pStrSection, char* pStrKey, char* pStrValue);
+	static bool PLUMINI_CALLMODE PlumIniWriteIntKeyValue(char* pStrFileName, char* pStrSection, char* pStrKey, int nValue);
 };
 
 #endif
